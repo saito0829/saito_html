@@ -1,0 +1,333 @@
+@charset "utf-8";
+
+/*main*/
+img {
+	width: 100%;
+}
+
+.fade{
+	display: none;
+}
+
+h2{
+	font-size: 2.0rem;
+	letter-spacing: 0.15em;
+}
+
+/*header*/
+header{
+	position: fixed;
+	top: -30px;
+	background: #000;
+	width: 100%;
+	z-index: 1000;
+	transition: 1.25s;
+	font-size: 0.5rem;
+}
+
+header.slide{
+	top: 0px;
+}
+
+header .logo a,
+footer .footerArea a{
+	color: #fff;
+}
+
+header .logo a:hover,
+.footerArea a:hover,
+.cont a:hover{
+	opacity:0.5;
+	filter: alpha(opacity=50);        /* ie lt 8 */
+	-ms-filter: "alpha(opacity=50)";  /* ie 8 */
+	-moz-opacity:0.5;                 /* FF lt 1.5, Netscape */
+	-khtml-opacity: 0.5;              /* Safari 1.x */
+	transition: 0.2s;
+}
+
+.headerArea{
+	min-width: 1100px;
+	position: relative;
+	color: #fff;
+	top: 0px;
+	line-height: 45px;
+	height: 45px;
+}
+
+/*logo*/
+.logo {
+	padding: 0px 28px;
+	overflow: hidden;
+	position: absolute;;
+	display: inline-block;
+	vertical-align: top;
+	font-family: Roboto-Medium, sans-serif;
+	top: auto;
+	left: auto;
+	-webkit-transform: none;
+	transform: none;
+	letter-spacing: 0.15em;
+}
+
+#menu {
+	position: absolute;
+	top: 0px;
+	left: 398px;
+	letter-spacing: 0.4em;
+}
+
+#menu ul li,
+#portfolioMenu ul li {
+	padding: 0px 28px;
+	display: inline-block;
+}
+
+#menu ul li a,
+#portfolioMenu ul li a{
+	color: #fff;
+	position: relative;
+}
+
+#menu ul li a:after,
+#portfolioMenu ul li a:after {
+    content: '';
+    position: absolute;
+    left: 0px;
+    bottom: -6px;
+    display: inline-block;
+    width: 100%;
+    height: 1px;
+    background-color: #fff;
+    -webkit-transition: 0.2s cubic-bezier(0.18, 0.59, 0.36, 0.76);
+    transition: 0.2s cubic-bezier(0.18, 0.59, 0.36, 0.76);
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+}
+
+#menu ul li a:hover::after,
+#portfolioMenu ul li a:hover::after {
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
+/*footer*/
+footer{
+	background: #000;
+	position: absolute;
+	bottom: 0px;
+		width: 100%;
+}
+
+.footerArea{
+	padding-left:28px;
+	min-width: 1100px;
+	color: #fff;
+	letter-spacing: 0.15em;
+	font-size: 0.5rem;
+	line-height: 40px;
+	height: 40px;
+}
+
+/*cont*/
+.cont{
+	padding: 45px 0 100px;
+}
+
+/*main*/
+.main{
+	display: none;
+	min-width: 1100px;
+}
+
+.topImg{
+	height: 300px;
+	min-height: 300px;
+	overflow: hidden;
+}
+
+.topAisatsu{
+	margin-top: 80px;
+	padding: 30px;
+	background: #f9f9f9;
+}
+
+.topAisatsu .topAisatsuTxt{
+	font-size: 1.0rem !important;
+}
+
+.topAisatsuTit{
+	font-size: 1.5rem !important;
+	text-align: center;
+	padding-bottom: 10px;
+	margin-bottom: 30px;
+	border-bottom: 1px solid #999;
+}
+
+/*block2*/
+.block2,
+.block01{
+	width: 980px;
+	margin: 0 auto;
+}
+
+.block2 ul{
+	margin-right: -40px;
+}
+
+.block2 ul li{
+	float: left;
+	width: 470px;
+	margin-top: 60px;
+	margin-right: 40px;
+}
+
+/*block01*/
+.block01{
+
+}
+
+.block01 .block01Left{
+	float: left;
+	width: 660px;
+}
+
+.block01 .block01Right{
+	float: right;
+	width: 300px;
+}
+
+.contArea p{
+	font-size: 1.5rem;
+}
+
+.contArea p span{
+	font-size: 0.75rem;
+}
+
+.contArea li a{
+	display: block;
+}
+
+.contArea li a:hover{
+	opacity:0.7;
+	filter: alpha(opacity=70);        /* ie lt 8 */
+	-ms-filter: "alpha(opacity=70)";  /* ie 8 */
+	-moz-opacity:0.7;                 /* FF lt 1.5, Netscape */
+	-khtml-opacity: 0.7;              /* Safari 1.x */
+	transition: 0.5s;
+}
+
+
+/*scrEvent*/
+.scrEvent {
+	/*position: relative;*/
+	/*margin: 0 13px;*/
+	opacity: 0;
+	-webkit-transform: translateY(50px);
+	-ms-transform: translateY(50px);
+	transform: translatYX(50px);
+	-webkit-transition: -webkit-transform .5s cubic-bezier(.77,0,.175,1),opacity .5s cubic-bezier(.88,.73,1,.86);
+	transition: transform .5s cubic-bezier(.77,0,.175,1),opacity .5s cubic-bezier(.88,.73,1,.86);
+}
+
+.scrEvent.slide{
+	opacity: 1;
+	-webkit-transition: all .5s cubic-bezier(.49,.99,.9,1);
+	transition: all .5s cubic-bezier(.49,.99,.9,1);
+	-webkit-transform: translateY(0px);
+	-ms-transform: translateY(0px);
+	transform: translatYX(0px);
+}
+
+/*kasouArea*/
+.kasouArea{
+	width: 980px;
+	margin: 80px auto 0 ;
+}
+
+.profileAreaIn{
+	margin: 60px 0 0 0;
+}
+
+.profileArea dt,
+.profileArea dd{
+	float: left;
+}
+
+.profileArea dt{
+	clear:left;
+	width: 100px;
+}
+
+.historyArea{
+	margin: 30px 0 0 0 ;
+}
+
+.historyTit{
+	padding: 3px 7px;
+	background: #eee;
+}
+
+.historyArea ul{
+	margin: 10px 0 0 0 ;
+}
+
+.aisatsu {
+	margin: 10px 0 0 0 ;
+}
+
+/*portfolio*/
+.portfolioCont{
+	margin-top: 60px;
+}
+
+.sakuhin{
+	margin-top: 40px;
+}
+
+.sakuhin ul {
+	margin-right: -25px;
+}
+
+.sakuhin ul li{
+	width: 310px;
+	margin-right: 25px;
+	float: left;
+}
+
+.sakuhin ul li:nth-child(n + 4){
+	margin-top: 40px;
+
+	}
+
+.sakuhin ul li a{
+	display: block;
+}
+
+.sakuhin ul li .imgArea{
+	height: 200px;
+	max-height: 200px;
+	overflow: hidden;
+}
+
+.sakuhin .txtArea{
+	margin-top: 8px;
+}
+
+.sakuhin .txtArea .tit{
+	font-weight: bold;
+	font-size: 1.0rem;
+	margin-bottom: 8px;
+	padding-bottom: 5px;
+	border-bottom: 1px solid #999;
+}
+
+.zasshiTit{
+	margin-top: 25px;
+}
+
+.zasshiArea{
+	margin-top: 25px;
+}
